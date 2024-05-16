@@ -3,4 +3,4 @@ export interface Choice {
     url: string;
     choice_text: string;
     votes: number;
-}
+  }

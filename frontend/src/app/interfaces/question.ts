@@ -1,5 +1,5 @@
 export interface Question {
-    id: number;
+	id: number;
 	url: string;
 	question_text: string;
 	pub_date: string;

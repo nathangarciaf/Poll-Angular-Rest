@@ -4,19 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { PollService } from '../services/poll.service';
 
 @Component({
-  selector: 'app-question-list',
+  selector: 'app-choice-list',
   standalone: true,
   imports: [CommonModule, HttpClientModule],
-  templateUrl: './question-list.component.html',
-  styleUrls: ['./question-list.component.css']
+  templateUrl: './choice-list.component.html',
+  styleUrls: ['./choice-list.component.css']
 })
-export class QuestionListComponent {
+export class ChoiceListComponent {
   items: any[] = [];
 
   constructor(private pollService: PollService) { }
 
   ngOnInit(): void {
-    this.pollService.getQuestions().subscribe(data => {
+    this.pollService.getChoices().subscribe(data => {
       this.items = data;
     });
   }

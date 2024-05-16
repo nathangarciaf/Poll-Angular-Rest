@@ -1,4 +1,10 @@
-<div *ngFor="let item of items">
-  <h3>{{ item.question_text }}</h3>
-  <p>{{ item.pub_date }}</p>
+<div *ngIf="items.length > 0; else noPolls" class="question-list">
+	<div *ngFor="let item of items" class="question-item">
+        <h2>Question Text: {{ item.question_text }}</h2>
+        <p>Publication date: {{ item.pub_date }}</p> 
+	</div>
 </div>
+
+<ng-template #noPolls>
+	<p class="no-polls-message">No polls are available.</p>
+</ng-template>
